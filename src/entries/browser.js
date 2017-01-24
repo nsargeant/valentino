@@ -1,3 +1,8 @@
+// Styles
+import './browser.scss';
+
+// JS
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from '../presentations/browser/main/main';
@@ -7,10 +12,10 @@ let hasRendered = false;
 
 const bindRootToDOM = () => {
 
-	let elBody = document.querySelector('body'),
-			elMain = document.createElement('main');
+  let elBody = document.querySelector('body'),
+      elMain = document.createElement('main');
 
-	elBody.append(elMain);
+  elBody.append(elMain);
 }
 
 const bindMainToRoot = () => {
@@ -21,11 +26,11 @@ const bindMainToRoot = () => {
 };
 
 const render = () => {
-	if(!hasRendered){
-		hasRendered = true;
-		bindRootToDOM();
-		bindMainToRoot();	
-	}
+  if(!hasRendered) {
+    hasRendered = true;
+    bindRootToDOM();
+    bindMainToRoot(); 
+  }
 }
 
 document.onreadystatechange = render;
